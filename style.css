@@ -1,0 +1,199 @@
+    /* Import Google Font - Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background-color: #242424;
+    }
+
+    header {
+
+        padding-top: 80px;
+    }
+
+    .container {
+        width: 70%;
+        margin: 0 auto;
+        max-width: 70%;
+    }
+
+    .container h1 {
+        background: linear-gradient(to right, #4285f4, #d96570);
+        width: fit-content;
+        background-clip: text;
+        color: transparent;
+        font-size: 60px;
+        margin: 0 auto 80px;
+    }
+
+    .container h2 {
+        font-size: 50px;
+        color: #e3e3e3;
+    }
+
+    .container p {
+        font-size: 36px;
+        color: #e3e3e3;
+    }
+
+    .chat-list {
+        margin-top: 50px;
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .chat-list .message {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+        /* justify-content: space-between; */
+    }
+
+    .chat-list .inner-chat {
+        padding-bottom: 100px;
+    }
+
+    .chat-list .message p {
+        font-size: 20px;
+
+
+
+    }
+
+    .chat-list .message img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        align-self: flex-start;
+    }
+
+    .chat-list .inner-chat span {
+        margin-left: 60px;
+        transition: 0.3s;
+    }
+.inner-chat .message .displayP{
+    /* display: none; */
+    white-space: pre-wrap;
+}
+    .chat-list .inner-chat span:hover {
+        color: #e3e3e3;
+        cursor: pointer;
+    }
+
+    .user-message {
+        padding-bottom: 50px;
+    }
+
+.loading-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .loading-container .loadinglayer {
+        background: linear-gradient(to right, #4285f4, #242424, #4285f4);
+        width: 100%;
+        height: 15px;
+        background-position: -800px;
+        animation: loadingAnimation 2.5s linear infinite;
+    }
+
+
+    .loading-container .loadinglayer:last-child {
+        width: 70%;
+    }
+
+    @keyframes loadingAnimation {
+        0% {
+            background-position: -800px 0;
+        }
+
+        100% {
+            background-position: 800px;
+        }
+    }
+
+    .typing-form {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-wrapper {
+        width: 60%;
+        max-width: 70%;
+        position: relative;
+        background-color: #242424;
+        height: 100%;
+    }
+
+    .input-wrapper input {
+        width: 100%;
+        padding: 17px 50px 17px 25px;
+        height: 100%;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        background-color: #383838;
+        transition: background-color 0.3s ease;
+        color: #e3e3e3;
+    }
+
+    .input-wrapper input:focus {
+        background-color: #444;
+    }
+
+    .input-wrapper button {
+        position: absolute;
+        opacity: 0;
+        right: 15px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: right 0.3s;
+        font-size: 26px;
+        color: #383838;
+        color: #e3e3e3;
+    }
+
+    .input-wrapper button:focus {
+        right: 10px;
+    }
+
+    .input-wrapper input:valid~button {
+        opacity: 1;
+    }
+    @media screen and (max-width:776px) {
+        header {
+                padding-top: 10px;
+            }
+        .container{
+            max-width: 100%;
+        }
+         .container h1 {
+      
+             font-size: 40px;
+             margin: 0 auto 10px;
+         }
+                 .container h2 {
+                     font-size: 30px;
+                 }
+                                 .container p {
+                                     font-size: 26px;
+                                 }
+    }
